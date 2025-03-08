@@ -45,10 +45,10 @@ function shuffleArray(array) {
 
 function populateTechBackground() {
     techSection.innerHTML = "";
-    
-    let shuffledTechnologies = shuffleArray([...technologies]); // Copia y mezcla el array
-    let totalCards = Math.ceil(window.innerWidth / 100) * Math.ceil(window.innerHeight / 100);
-    
+
+    let shuffledTechnologies = shuffleArray([...technologies]);
+    let totalCards = Math.ceil(window.innerWidth / 90) * Math.ceil(window.innerHeight / 90);
+
     for (let i = 0; i < totalCards; i++) {
         const tech = shuffledTechnologies[i % shuffledTechnologies.length];
         const card = document.createElement("div");
