@@ -47,7 +47,7 @@ function populateTechBackground() {
     techSection.innerHTML = "";
 
     let shuffledTechnologies = shuffleArray([...technologies]);
-    let totalCards = Math.ceil(window.innerWidth / 90) * Math.ceil(window.innerHeight / 90);
+    let totalCards = Math.ceil(window.innerWidth / 80) * Math.ceil(window.innerHeight / 80);
 
     for (let i = 0; i < totalCards; i++) {
         const tech = shuffledTechnologies[i % shuffledTechnologies.length];
