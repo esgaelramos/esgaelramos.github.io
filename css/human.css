@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #111;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+/* TECH */
+.tech-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  z-index: 1;
+  margin-top: 10px;
+}
+.card {
+  width: 100px;
+  height: 100px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  position: relative;
+  pointer-events: auto;
+}
+.card img {
+  width: 60%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.card:hover {
+  background: #444;
+  transform: scale(1.1);
+}
+.card:hover img {
+  opacity: 0.2;
+}
+.card .tech-name {
+  position: absolute;
+  opacity: 0;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+}
+.card:hover .tech-name {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+  }
+  
+  .card img {
+    width: 90%;
+  }
+  
+  .card .tech-name {
+    font-size: 12px;
+  }
+}
+
+/* HUMAN */
+.human-container {
+  min-height: calc(100vh - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+svg {
+  flex-shrink: 0;
+  width: 600px;
+  max-width: 90vw;
+}
+
+/* PROFILE */
+.profile-footer {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  font-weight: bold;
+  text-align: center;
+}
+
+.profile-footer a {
+  color: #fff;
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.profile-footer a:hover {
+  color: #40e4d9;
+}
