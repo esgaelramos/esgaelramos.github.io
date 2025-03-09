@@ -76,6 +76,20 @@ body {
   }
 }
 
+.card .tech-stars {
+  position: absolute;
+  bottom: 5px;
+  font-size: 12px;
+  color: gold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .tech-stars {
+  opacity: 1;
+}
+
 /* HUMAN */
 .human-container {
   min-height: calc(100vh - 1rem);
