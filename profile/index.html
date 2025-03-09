@@ -5,10 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="logo icon" href="../assets/logo.ico">
-    <title>Legacy Page | esGaelRamos</title>
+    <title>Profile | esGaelRamos</title>
     <!-- ---------- STYLES ---------- -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/first-version.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <!-- ---------- FONTS ---------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,76 +15,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="language-selector" onclick="toggleLanguage()">EN / ES</div>
     <!-- ----------
-        HEADER    
+        MAIN SCROLL
     ---------- -->
-    <header>
-        <div class="header-container">
-            <p class="header-message"><b>Web Under Construction*</b></p>
-        </div>
-    </header> 
-    <!-- ----------
-        MAIN    
-    ---------- --> 
-    <main>
-        <section class="main-container">
-            <h1>
-                Hi! I'm Gael Ramos
-                <br>I <typewriter></typewriter>
-            </h1>
+    <main class="scroll-container">
+        <!-- ----------
+            SCROLL-1 | ABOUT ME
+        ---------- -->
+        <section class="scroll-item is-visible">
+            <h2 data-lang="about"></h2>
+            <div class="scroll-item__content">
+                <div class="scroll-item__inner" data-observer data-lang="about-text"></div>
+            </div>
         </section>
-        <section class="options-container">
-            <div class="option-item whatsapp-link">
-                <a href="https://api.whatsapp.com/send?phone=5217299503295&text=¡Hola+Gael!" class="option-item-item">
-                    <div class="option-img">
-                        <img src="../assets/whatsapp.svg" alt="WhatsApp Logo" style="width: 70px;">
-                    </div>
-                    <div class="option text">
-                        <h2>WhatsApp Me</h2>
-                    </div>
-                </a>
+        <!-- ----------
+            SCROLL-2 | EXPERIENCE
+        ---------- -->
+        <section class="scroll-item">
+            <h2 data-lang="experience"></h2>
+            <div class="scroll-item__content">
+                <div class="scroll-item__inner" data-observer data-lang="experience-text"></div>
             </div>
-            <div class="option-item mail-link">
-                <a href="mailto:esgaelramos@gmail.com?Subject=Me%20interesa%20tu%20perfil%20Gael" class="option-item-item">
-                    <div class="option-img">
-                        <img src="../assets/mail.svg" alt="Mail Logo" style="width: 70px;">
-                    </div>
-                    <div class="option text">
-                        <h2>Send Mail</h2>
-                    </div>
-                </a>
+        </section>
+        <!-- ----------
+            SCROLL-3 | SKILLS
+        ---------- -->
+        <section class="scroll-item">
+            <h2 data-lang="skills"></h2>
+            <div class="scroll-item__content">
+                <div class="scroll-item__inner" data-observer data-lang="skills-text"></div>
             </div>
-            <div class="option-item download-pdf">
-                <a href="https://github.com/esgaelramos" class="option-item-item">
-                    <div class="option-img">
-                        <img src="../assets/github.svg" alt="GitHub Logo" style="width: 70px;">
-                    </div>
-                    <div class="option text">
-                        <h2>My GitHub</h2>
-                    </div>
-                </a>
+        </section>
+        <!-- ----------
+            SCROLL-4 | CONTACT
+        ---------- -->
+        <section class="scroll-item">
+            <h2 data-lang="contact"></h2>
+            <div class="scroll-item__content">
+                <div class="scroll-item__inner" data-observer data-lang="contact-text"></div>
+                <p><a href="mailto:contacto@ejemplo.com" data-lang="contact-email"></a></p>
             </div>
-            <div class="option-item download-pdf">
-                <a href="/" download="CV-Gael-Ramos-Backend-Python" class="option-item-item">
-                    <div class="option-img">
-                        <img src="../assets/cv.svg" alt="CV Logo" style="width: 70px;">
-                    </div>
-                    <div class="option text">
-                        <h2>Download CV</h2>
-                    </div>
-                </a>
-            </div>            
         </section>
     </main>
-    <!-- ----------
-        FOOTER    
-    ---------- --> 
-    <footer>
-        <div class="footer-container">
-            <p class="footer-final"><b><script>var f = new Date(); document.write(f.getFullYear());</script> | Every day is a day!</b></p>    
-        </div>
-    </footer>
-<!-- ---------- JS ---------- -->
-<script src="../js/first-version.js"></script>
+
+    <!-- ---------- JS ---------- -->
+    <script src="../js/profile.js"></script>
 </body>
 </html>
