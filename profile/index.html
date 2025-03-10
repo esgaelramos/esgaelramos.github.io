@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-selector" onclick="toggleLanguage()">EN / ES</div>
+    <div class="language-selector" onclick="toggleLanguage()">🌐</div>
     <!-- ----------
         MAIN SCROLL
     ---------- -->
@@ -53,12 +53,54 @@
         <section class="scroll-item">
             <h2 data-lang="contact"></h2>
             <div class="scroll-item__content">
-                <div class="scroll-item__inner" data-observer data-lang="contact-text"></div>
-                <p><a href="mailto:contacto@ejemplo.com" data-lang="contact-email"></a></p>
+                <div class="contact-options">
+                    <a href="https://api.whatsapp.com/send?phone=5217299503295&text=¡Hola+Gael!" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="../assets/whatsapp.svg" alt="WhatsApp Logo">
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-observer data-lang="contact-wa"></h3>
+                        </div>
+                    </a>
+        
+                    <a href="mailto:esgaelramos@gmail.com?Subject=Me%20interesa%20tu%20perfil%20Gael" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="../assets/mail.svg" alt="Mail Logo">
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-observer data-lang="contact-mail"></h3>
+                        </div>
+                    </a>
+        
+                    <a href="https://github.com/esgaelramos" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="../assets/github.svg" alt="GitHub Logo">
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-observer data-lang="contact-github"></h3>
+                        </div>
+                    </a>
+        
+                    <a href="/" class="contact-card">
+                        <div class="contact-icon">
+                            <img src="../assets/cv.svg" alt="CV Logo">
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-observer data-lang="contact-cv"></h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- ---------- FOOTER ---------- -->
+            <div class="footer-container">
+                <p class="footer-final">
+                    <b><script>var f = new Date(); document.write(f.getFullYear());</script>
+                        <span data-observer data-lang="contact-footer"></span>
+                    </b>
+                </p>    
             </div>
         </section>
     </main>
-
     <!-- ---------- JS ---------- -->
     <script src="../js/profile.js"></script>
 </body>

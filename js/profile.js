@@ -8,8 +8,11 @@ const translations = {
         skills: "Habilidades",
         "skills-text": "Python, FastAPI, Django, AWS, Docker, CI/CD, PostgreSQL, Redis.",
         contact: "Contacto",
-        "contact-text": "¿Quieres trabajar juntos? Envíame un mensaje.",
-        "contact-email": "contacto@ejemplo.com"
+        "contact-wa": "Mi WhatsApp",
+        "contact-mail": "Envíame un Correo",
+        "contact-github": "Mi GitHub",
+        "contact-cv": "Descargar CV",
+        "contact-footer": "¡Cada Día es un Día!",
     },
     en: {
         about: "About Me",
@@ -19,8 +22,11 @@ const translations = {
         skills: "Skills",
         "skills-text": "Python, FastAPI, Django, AWS, Docker, CI/CD, PostgreSQL, Redis.",
         contact: "Contact",
-        "contact-text": "Want to work together? Send me a message.",
-        "contact-email": "contact@sample.com"
+        "contact-wa": "My WhatsApp",
+        "contact-mail": "Send me an Email",
+        "contact-github": "My GitHub",
+        "contact-cv": "Download CV",
+        "contact-footer": "Every Day is a Day!",
     }
 };
 
