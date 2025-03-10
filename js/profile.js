@@ -12,6 +12,8 @@ const translations = {
         "contact-mail": "Envíame un Correo",
         "contact-github": "Mi GitHub",
         "contact-cv": "Descargar CV",
+        "contact-pre-science": "LA CIENCIA QUE NO ENTENDEMOS, PARECE MAGIA.",
+        "contact-pos-science": "LA QUE ENTENDEMOS, PUEDE HACER MAGIA.",
         "contact-footer": "¡Cada Día es un Día!",
     },
     en: {
@@ -26,6 +28,8 @@ const translations = {
         "contact-mail": "Send me an Email",
         "contact-github": "My GitHub",
         "contact-cv": "Download CV",
+        "contact-pre-science": "THE SCIENCE YOU DON'T KNOW, LOOKS LIKE MAGIC.",
+        "contact-pos-science": "SCIENCE YOU KNOW, CAN DO MAGIC.",
         "contact-footer": "Every Day is a Day!",
     }
 };

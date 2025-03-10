@@ -73,10 +73,6 @@ a{
 }
 
 .scroll-item__content {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center; */
   height: 100vh;
   font-size: 1.2rem;
   max-width: 1280px;
@@ -113,6 +109,15 @@ a{
 /* **************************************************
     SCROLL-4 CONTACT STYLES
 ************************************************* **/
+.contact-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
 .contact-options {
   display: flex;
   flex-wrap: wrap;
@@ -167,6 +172,46 @@ a{
   }
   .contact-text h3 {
     font-size: 0.8rem;
+  }
+}
+/* **************************************************
+    SCIENCE QUOTE STYLES
+************************************************* **/
+.science-quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.science-icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.science-text {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .science-quote {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .science-icon img {
+      width: 50px;
+      height: 50px;
+  }
+
+  .science-text {
+      font-size: 1rem;
   }
 }
 /* **************************************************
