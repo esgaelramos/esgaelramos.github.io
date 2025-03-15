@@ -76,7 +76,7 @@ images.forEach(target => observer2.observe(target));
 // SKILLS FUNCTIONS SECTION
 const listTechnologies = [
   {
-    name: "AWS",
+    name: "AWS", yearStart: 2023,
     img: "../assets/tech/aws.svg", colors: ["#FF9900", "#232F3E"],
     description: {
       en: "Includes Architecting, Deploying, and Managing AWS Cloud Services like EC2, S3, RDS, Lambda, API Gateway, and more.",
@@ -88,7 +88,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Django",
+    name: "Django", yearStart: 2021,
     img: "../assets/tech/django.svg", colors: ["#092E20", "#44B78B"],
     description: {
       en: "Strong experience in building web applications using Django, Django REST Framework, and MonoRepo Architecture.",
@@ -100,7 +100,7 @@ const listTechnologies = [
     },
   },
   {
-    name: "GitHub",
+    name: "GitHub", yearStart: 2020,
     img: "../assets/tech/github.svg", colors: ["#181717", "#6e5494"],
     description: {
       en: "Experience in using Git and GitHub with CI/CD pipelines for GitHub Actions.",
@@ -112,7 +112,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Linux",
+    name: "Linux", yearStart: 2018,
     img: "../assets/tech/linux.svg", colors: ["#FCC624", "#333333"],
     description: {
       en: "Experience in using Linux for development and deployment of applications since 2018.",
@@ -124,7 +124,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Tailwind",
+    name: "Tailwind", yearStart: 2024,
     img: "../assets/tech/tailwind.svg", colors: ["#38BDF8", "#06B6D4"],
     description: {
       en: "Adaptable in using Tailwind CSS for building responsive web applications with scalable design.",
@@ -136,7 +136,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Docker",
+    name: "Docker", yearStart: 2022,
     img: "../assets/tech/docker.svg", colors: ["#2496ED", "#0E4976"],
     description: {
       en: "Experience in using Docker for containerizing with Docker Compose, Volumes, and Networks.",
@@ -148,7 +148,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "FastAPI",
+    name: "FastAPI", yearStart: 2022,
     img: "../assets/tech/fastapi.svg", colors: ["#009688", "#004D40"],
     description: {
       en: "Familiarized with the use of PyDantic, SQLAlchemy, Starlette, and Uvicorn for building APIs with FastAPI.",
@@ -160,7 +160,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Git",
+    name: "Git", yearStart: 2020,
     img: "../assets/tech/git.svg", colors: ["#F1502F", "#E44C29"],
     description: {
       en: "Solid foundations in using Advanced Git (Stash, Cherry-Pick, Rebase, Remote, etc.).",
@@ -172,7 +172,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "MySQL",
+    name: "MySQL", yearStart: 2021,
     img: "../assets/tech/mysql.svg", colors: ["#00758F", "#F29111"],
     description: {
       en: "My first Database Experience, since designing, implementing, and mantaining with Console and Workbench.",
@@ -184,7 +184,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Python",
+    name: "Python", yearStart: 2020,
     img: "../assets/tech/python.svg", colors: ["#306998", "#FFD43B"],
     description: {
       en: "The love of my life, Python is my main programming language for Any Personal Project.",
@@ -197,7 +197,7 @@ const listTechnologies = [
 
   },
   {
-    name: "HTML5",
+    name: "HTML5", yearStart: 2020,
     img: "../assets/tech/html5.svg", colors: ["#E34F26", "#F16529"],
     description: {
       en: "My starting point in web development, handling tags, structure, and semantics.",
@@ -209,7 +209,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "React",
+    name: "React", yearStart: 2023,
     img: "../assets/tech/react.svg", colors: ["#61DAFB", "#20232A"],
     description: {
       en: "A guilty pleasure, implementing components, states, and props with TypeScript and best practices.",
@@ -221,7 +221,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "PyDantic",
+    name: "PyDantic", yearStart: 2022,
     img: "../assets/tech/pydantic.svg", colors: ["#4B8BBE", "#FFD43B"],
     description: {
       en: "My only Open Source contribution, fancy for data validation, serialization, and documentation.",
@@ -233,7 +233,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "Pandas",
+    name: "Pandas", yearStart: 2022,
     img: "../assets/tech/pandas.svg", colors: ["#150458", "#E70488"],
     description: {
       en: "A headache, that is justified when it comes to manipulating data in DataFrames, Series, and Panel.",
@@ -245,7 +245,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "NumPy",
+    name: "NumPy", yearStart: 2022,
     img: "../assets/tech/numpy.svg", colors: ["#4D77CF", "#FFD43B"],
     description: {
       en: "Remember the basics in Data Types, Primitives, Optimizations, and Operations in Arrays.",
@@ -257,7 +257,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "PyTest",
+    name: "PyTest", yearStart: 2022,
     img: "../assets/tech/pytest.svg", colors: ["#0A9EDC", "#FFD43B"],
     description: {
       en: "Fan and Hater of TDD, utilizing fixtures, parametrization, and plugins for testing, love it as a framework.",
@@ -269,7 +269,7 @@ const listTechnologies = [
     }
   },
   {
-    name: "PostgreSQL",
+    name: "PostgreSQL", yearStart: 2022,
     img: "../assets/tech/postgres.svg", colors: ["#336791", "#4169E1"],
     description: {
       en: "The Database for every thing with ACID, Transactions, and Concurrency Control, just check the budget.",
@@ -319,6 +319,12 @@ function populateTechBackground() {
 }
 
 function displaySelectedSkill(tech) {
+
+  const copyYearsExperience = {
+    en: "years of experience.",
+    es: "años de experiencia."
+  }
+
   infoSection.innerHTML = `
     <div class="selected-skill-card" style="background: linear-gradient(135deg, ${tech.colors[0]}, ${tech.colors[1]});">
         <img src="${tech.img}" alt="${tech.name}">
@@ -328,6 +334,9 @@ function displaySelectedSkill(tech) {
           <ul class="skills-experience">
             ${tech.experience[currentLang].map(point => `<li>${point}</li>`).join("")}
           </ul>
+        </p>
+        <p class="skills-experience-time">
+            ${new Date().getFullYear() - tech.yearStart } ${copyYearsExperience[currentLang]}
         </p>
     </div>
   `;

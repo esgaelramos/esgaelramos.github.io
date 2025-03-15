@@ -180,7 +180,9 @@ a {
   transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
   position: relative;
   pointer-events: auto;
+  cursor: pointer;
 }
+
 .skills-card img {
   width: 60%;
   height: auto;
@@ -295,6 +297,9 @@ a {
     font-size: 0.9rem;
   }
   .skills-experience {
+    display: none;
+  }
+  .skills-experience-time {
     display: none;
   }
 }
