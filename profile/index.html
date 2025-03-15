@@ -45,8 +45,48 @@
         ---------- -->
         <section class="scroll-item">
             <h2 data-lang="experience"></h2>
-            <div class="scroll-item__content">
-                <div class="scroll-item__inner" data-observer data-lang="experience-text"></div>
+            <div class="scroll-item__content experience-container">
+        
+                <!-- Job 1 -->
+                <div class="experience-block">
+                    <img src="../assets/logo-podemos.png" alt="Company 1 Logo" class="experience-logo">
+                    <div class="experience-info">
+                        <h3 data-lang="experience-job1-title"></h3>
+                        <p class="experience-company" data-lang="experience-job1-company"></p>
+                        <p class="experience-time" data-lang="experience-job1-time"></p>
+                    </div>
+                    <button class="more-btn" onclick="toggleExperience(1)" data-lang="experience-more-btn"></button>
+                </div>
+        
+                <!-- Job 2 -->
+                <div class="experience-block">
+                    <img src="../assets/logo-insignia.png" alt="Company 2 Logo" class="experience-logo">
+                    <div class="experience-info">
+                        <h3 data-lang="experience-job2-title"></h3>
+                        <p class="experience-company" data-lang="experience-job2-company"></p>
+                        <p class="experience-time" data-lang="experience-job2-time"></p>
+                    </div>
+                    <button class="more-btn" onclick="toggleExperience(2)" data-lang="experience-more-btn"></button>
+                </div>
+        
+                <!-- Job 3 -->
+                <div class="experience-block">
+                    <img src="../assets/logo-ia.png" alt="Company 3 Logo" class="experience-logo">
+                    <div class="experience-info">
+                        <h3 data-lang="experience-job3-title"></h3>
+                        <p class="experience-company" data-lang="experience-job3-company"></p>
+                        <p class="experience-time" data-lang="experience-job3-time"></p>
+                    </div>
+                    <button class="more-btn" onclick="toggleExperience(3)" data-lang="experience-more-btn"></button>
+                </div>
+            </div>
+
+            <!-- Fullscreen Modals -->
+            <div id="experience-modal" class="experience-modal">
+                <div class="modal-content">
+                    <button class="close-btn" onclick="toggleExperience()">✖</button>
+                    <div id="modal-details"></div>
+                </div>
             </div>
         </section>
         <!-- ----------

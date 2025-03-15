@@ -1,6 +1,43 @@
 // LANGUAGE FUNCTIONS
 const translations = {
   es: {
+    // SECTION 2 - EXPERIENCE
+    experience: "Experiencia",
+    "experience-job1-title": "Desarrollador Python Junior",
+    "experience-job1-time": "Abril 2022 - Noviembre 2022",
+    "experience-job1-company": "Podemos Progresar / MicroFinance",
+    "experience-job2-title": "Desarrollador Python",
+    "experience-job2-time": "Febrero 2023 - Septiembre 2023",
+    "experience-job2-company": "Insignia Life | Seguros",
+    "experience-job3-title": "Consultor Fullstack",
+    "experience-job3-time": "Septiembre 2023 - Presente",
+    "experience-job3-company": "Independiente / Native Labs",
+    "experience-job1-details": `
+            <ul>
+                <li>Mantenimiento y soporte de sistemas heredados con PostgreSQL.</li>
+                <li>Implementación de lógica de negocios en Django y pruebas con Unit Tests.</li>
+                <li>Aplicación de TDD, GitFlow, Code Reviews y SonarQube en un entorno GitLab.</li>
+            </ul>
+        `,
+    "experience-job2-details": `
+            <ul>
+                <li>Automatización de procesos con Selenium, Pandas y OpenPyXL.</li>
+                <li>Desarrollo de un sistema de tickets con Django-HelpDesk & Docker Grafana/Loki.</li>
+                <li>Sincronización de bases de datos MySQL y OracleDB.</li>
+                <li>Despliegue con CI/CD en BitBucket.</li>
+            </ul>
+        `,
+    "experience-job3-details": `
+            <ul>
+                <li>Desarrollo de microservicios con FastAPI y React.</li>
+                <li>Gestión de servidores en AWS, DigitalOcean y Azure.</li>
+                <li>Documentación de APIs y gestión de bases de datos.</li>
+            </ul>
+        `,
+    "experience-more-btn": "Conocer Más",
+    "experence-tech-used": "Tencnologías Usadas",
+    // === === === === === === === ===  
+    // SECTION 4 - ABOUT
     about: "Sobre Mí",
     "about-text": "Desarrollador backend con 3 años de experiencia en Python, FastAPI y AWS.",
     experience: "Experiencia",
@@ -15,8 +52,46 @@ const translations = {
     "contact-pre-science": "LA CIENCIA QUE NO ENTENDEMOS, PARECE MAGIA.",
     "contact-pos-science": "LA QUE ENTENDEMOS, PUEDE HACER MAGIA.",
     "contact-footer": "¡Cada Día es un Día!",
+    // === === === === === === === ===  
   },
   en: {
+    // SECTION 2 - EXPERIENCE
+    experience: "Experience",
+    "experience-job1-title": "Python Junior Developer",
+    "experience-job1-time": "April 2022 - November 2022",
+    "experience-job1-company": "Podemos Progresar / MicroFinance",
+    "experience-job2-title": "Python Developer",
+    "experience-job2-time": "February 2023 - September 2023",
+    "experience-job2-company": "Insignia Life | Insurance",
+    "experience-job3-title": "Fullstack Consultant",
+    "experience-job3-time": "September 2023 - Present",
+    "experience-job3-company": "Self-Employed / Native Labs",
+    "experience-job1-details": `
+            <ul>
+                <li>Maintained and supported legacy systems with PostgreSQL.</li>
+                <li>Implemented business logic in Django and tested with Unit Tests.</li>
+                <li>Applied TDD, GitFlow, Code Reviews, and SonarQube in GitLab.</li>
+            </ul>
+        `,
+    "experience-job2-details": `
+            <ul>
+                <li>Automated processes with Selenium, Pandas, and OpenPyXL.</li>
+                <li>Developed a ticketing system with Django-HelpDesk & Docker Grafana/Loki.</li>
+                <li>Synchronized MySQL and OracleDB databases.</li>
+                <li>Deployment using CI/CD in BitBucket.</li>
+            </ul>
+        `,
+    "experience-job3-details": `
+            <ul>
+                <li>Developed microservices with FastAPI & React.</li>
+                <li>Managed cloud servers on AWS, DigitalOcean, and Azure.</li>
+                <li>API documentation and database management.</li>
+            </ul>
+        `,
+    "experience-more-btn": "Learn More",
+    "experence-tech-used": "Technologies Used",
+    // === === === === === === === ===  
+    // SECTION 4 - ABOUT
     about: "About Me",
     "about-text": "Backend developer with 3 years of experience in Python, FastAPI, and AWS.",
     experience: "Experience",
@@ -31,6 +106,7 @@ const translations = {
     "contact-pre-science": "THE SCIENCE YOU DON'T KNOW, LOOKS LIKE MAGIC.",
     "contact-pos-science": "SCIENCE YOU KNOW, CAN DO MAGIC.",
     "contact-footer": "Every Day is a Day!",
+    // === === === === === === === ===  
   }
 };
 
@@ -72,6 +148,68 @@ const observer2 = new IntersectionObserver(doThings, { ...options, threshold: 0.
 
 targets.forEach(target => observer.observe(target));
 images.forEach(target => observer2.observe(target));
+
+
+// EXPERIENCE FUNCTIONS
+function toggleExperience(id) {
+  const modal = document.getElementById("experience-modal");
+  const details = document.getElementById("modal-details");
+
+  if (!id) {
+      modal.classList.remove("active");
+      return;
+  }
+
+  const title = translations[currentLang][`experience-job${id}-title`] || "No Title";
+  const company = translations[currentLang][`experience-job${id}-company`] || "No Company";
+  const time = translations[currentLang][`experience-job${id}-time`] || "No Time";
+  const detailsText = translations[currentLang][`experience-job${id}-details`] || "<p>No details available.</p>";
+
+  const experienceTechnologies = {
+      1: ["Python", "Django", "PostgreSQL", "Git", "GitHub"],
+      2: ["Python", "Selenium", "Pandas", "Docker", "MySQL"],
+      3: ["FastAPI", "React", "AWS", "PostgreSQL", "Docker"]
+  };
+
+  const usedTechnologies = experienceTechnologies[id] || [];
+
+  const techList = usedTechnologies.map(tech => {
+      const techData = listTechnologies.find(t => t.name === tech);
+      return techData ? `
+          <div class="tech-item">
+              <img src="${techData.img}" alt="${techData.name}" class="tech-icon">
+              <span>${techData.name}</span>
+          </div>
+      ` : "";
+  }).join("");
+
+  details.innerHTML = `
+      <h2>${title}</h2>
+      <h3>${company}</h3>
+      <p class="experience-time-modal">${time}</p>
+      <div class="experience-description">${detailsText}</div>
+      <div class="experience-tech">
+          <h4>${translations[currentLang]["experence-tech-used"]}:</h4>
+          <div class="tech-list">${techList}</div>
+      </div>
+  `;
+
+  modal.classList.add("active");
+}
+
+
+document.getElementById("experience-modal").addEventListener("click", (e) => {
+  if (e.target === e.currentTarget) {
+    toggleExperience();
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    toggleExperience();
+  }
+});
+
 
 // SKILLS FUNCTIONS SECTION
 const listTechnologies = [
@@ -336,7 +474,7 @@ function displaySelectedSkill(tech) {
           </ul>
         </p>
         <p class="skills-experience-time">
-            ${new Date().getFullYear() - tech.yearStart } ${copyYearsExperience[currentLang]}
+            ${new Date().getFullYear() - tech.yearStart} ${copyYearsExperience[currentLang]}
         </p>
     </div>
   `;

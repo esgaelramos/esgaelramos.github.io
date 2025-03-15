@@ -26,7 +26,7 @@ const technologies = [
     { name: "Nginx", img: "../assets/tech/nginx.svg", colors: ["#009639", "#005F27"], rating: 3 },
     { name: "SQL", img: "../assets/tech/sql.svg", colors: ["#00758F", "#F29111"], rating: 4 },
     { name: "PyDantic", img: "../assets/tech/pydantic.svg", colors: ["#4B8BBE", "#FFD43B"], rating: 4 },
-    { name: "Strapi CMS", img: "../assets/tech/strapi.svg", colors: ["#4945FF", "#8E75FF"], rating: 4 },
+    { name: "StrapiCMS", img: "../assets/tech/strapi.svg", colors: ["#4945FF", "#8E75FF"], rating: 4 },
     { name: "Stripe", img: "../assets/tech/stripe.svg", colors: ["#635BFF", "#008CDD"], rating: 4 },
     { name: "Kafka", img: "../assets/tech/kafka.svg", colors: ["#231F20", "#E60023"], rating: 3 },
     { name: "Apache", img: "../assets/tech/apache.svg", colors: ["#D22128", "#A51E24"], rating: 3 },

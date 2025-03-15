@@ -112,6 +112,218 @@ a {
 /* **************************************************
     SCROLL-3 SKILLS STYLES
 ************************************************* **/
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 2rem;
+  gap: 2em;
+}
+
+.experience-block {
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.experience-logo {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.experience-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.experience-info h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  line-height: 0;
+}
+
+.experience-time {
+  font-size: 1rem;
+  color: var(--primary-color);
+  opacity: 0.8;
+}
+
+.experience-company {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.more-btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  background: var(--primary-color);
+  color: var(--re-background-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin-left: auto;
+}
+
+.more-btn:hover {
+  background: var(--re-background-color);
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .experience-container {
+    gap: 1em;
+  }
+  
+  .experience-block {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .experience-logo {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .experience-time {
+    display: none;
+  }
+
+  .more-btn {
+    margin-top: 10px;
+    padding: 6px 9px;
+    font-size: 0.8rem;
+  }
+
+}
+
+/* EXPERIENCE MODAL STYLES */
+.experience-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.experience-modal.active {
+  display: flex;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-content {
+  background: var(--background-color);
+  padding: 40px;
+  width: 90%;
+  max-width: 700px;
+  height: 80%;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-30px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.experience-modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5;
+
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--highlight-color);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    padding: 30px;
+  }
+}
+
+/* LIST SKILLS USED */
+.experience-tech {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.tech-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+/* **************************************************
+    SCROLL-3 SKILLS STYLES
+************************************************* **/
 .skills-container {
   display: flex;
   flex-direction: column;
