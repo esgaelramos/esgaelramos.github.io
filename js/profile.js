@@ -39,7 +39,8 @@ const translations = {
     // === === === === === === === ===  
     // SECTION 4 - ABOUT
     about: "Sobre Mí",
-    "about-text": "Desarrollador backend con 3 años de experiencia en Python, FastAPI y AWS.",
+    "about-title": "Desarrollador Python BackEnd",
+    "about-typewriter": "Te cuento",
     experience: "Experiencia",
     "experience-text": "He trabajado en diversos proyectos de backend, desde APIs hasta microservicios escalables.",
     skills: "Habilidades",
@@ -93,7 +94,8 @@ const translations = {
     // === === === === === === === ===  
     // SECTION 4 - ABOUT
     about: "About Me",
-    "about-text": "Backend developer with 3 years of experience in Python, FastAPI, and AWS.",
+    "about-title": "Python BackEnd Developer",
+    "about-typewriter": "I say",
     experience: "Experience",
     "experience-text": "I have worked on various backend projects, from APIs to scalable microservices.",
     skills: "Skills",
@@ -493,3 +495,59 @@ window.addEventListener("DOMContentLoaded", () => {
 populateTechBackground();
 window.addEventListener("resize", populateTechBackground);
 
+// FUNCTIONS ABOUT
+document.addEventListener('DOMContentLoaded',function(event) {
+  const textToTypeWrite = {
+    en: [
+      " like the FrontEnd",
+      " hate Fix Bugs",
+      " enjoy Development",
+      " am learning English",
+      " Scroll More!"
+    ],
+    es: [
+      " me gusta el FrontEnd",
+      " odio Arreglar Bugs",
+      " disfruto Desarrollar",
+      " estoy aprendiendo Inglés",
+      " sigue Scrolleando!"
+    ]
+  }
+
+  const dataText = textToTypeWrite[currentLang];
+  
+  // type one text in the typwriter
+  function typeWriter(text, i, fnCallback){
+    // chekc if text isn't finished yet
+    if (i < (text.length)) {
+      document.querySelector("typewriter").innerHTML = text.substring(0, i+1) +'<span class="cursor-text" aria-hidden="true"></span>';
+
+      // wait for a while and call this function again for next character
+      setTimeout(function() {
+        typeWriter(text, i + 1, fnCallback)
+      }, 100);
+    }
+    else if (typeof fnCallback == 'function') {
+      // call callback after timeout
+      setTimeout(fnCallback, 700);
+    }
+  }
+  // start a typewriter animation for a text in the dataText array
+    function StartTextAnimation(i) {
+      if (typeof dataText[i] == 'undefined') {
+        setTimeout(function() {
+          StartTextAnimation(0);
+        }, 5000);
+      }
+    if (i < dataText[i].length) {
+      // text exists! start typewriter animation
+      typeWriter(dataText[i], 0, function() {
+        StartTextAnimation(i + 1);
+      });
+    }
+  }
+  // start the text animation
+  setTimeout(function() {
+    StartTextAnimation(0);
+  }, 2000);
+});

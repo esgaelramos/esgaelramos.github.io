@@ -110,7 +110,42 @@ a {
 }
 
 /* **************************************************
-    SCROLL-3 SKILLS STYLES
+    SCROLL-1 ABOUT STYLES
+************************************************* **/
+.human-container {
+  min-height: calc(100vh - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+svg {
+  flex-shrink: 0;
+  width: 500px;
+  max-width: 90vw;
+}
+
+.about-container {
+  margin: 0 1em;
+}
+
+.about-container h1 {
+  line-height: 1.1;
+}
+
+.about-description {
+  font-size: 1.3em;
+}
+
+.about-footer {
+  font-size: 1.2em;
+}
+
+/* **************************************************
+    SCROLL-2 EXPERIENCES STYLES
 ************************************************* **/
 .experience-container {
   display: flex;
@@ -194,7 +229,7 @@ a {
   .experience-container {
     gap: 1em;
   }
-  
+
   .experience-block {
     flex-direction: column;
     text-align: center;
@@ -215,7 +250,6 @@ a {
     padding: 6px 9px;
     font-size: 0.8rem;
   }
-
 }
 
 /* EXPERIENCE MODAL STYLES */
@@ -265,7 +299,6 @@ a {
   margin: 0;
   font-size: 1.2em;
   line-height: 1.5;
-
 }
 
 .close-btn {
@@ -319,7 +352,6 @@ a {
   height: 30px;
   object-fit: contain;
 }
-
 
 /* **************************************************
     SCROLL-3 SKILLS STYLES
