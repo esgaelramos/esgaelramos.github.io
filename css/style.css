@@ -1,21 +1,25 @@
 /* **************************************************
     PRINCIPAL STYLES 
 ************************************************* **/
-:root{
-  --background-color: #D1FDFF;
-  --re-background-color: #C2FCFF;
+:root {
+  --background-color: #d1fdff;
+  --re-background-color: #c2fcff;
   --primary-color: #102266;
   --body-color: #000000;
-  --highlight-color: #49FFD9;
-  --header-color: #F4FBEE;
+  --highlight-color: #49ffd9;
+  --header-color: #f4fbee;
 }
-body{
+body {
   color: var(--body-color);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   line-height: 1.09;
-  background: radial-gradient(circle, var(--re-background-color), var(--background-color));
+  background: radial-gradient(
+    circle,
+    var(--re-background-color),
+    var(--background-color)
+  );
 }
-a{
+a {
   text-decoration: none;
 }
 /* **************************************************
@@ -105,11 +109,200 @@ a{
   display: block;
 }
 
+/* **************************************************
+    SCROLL-3 SKILLS STYLES
+************************************************* **/
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 95vh;
+}
+
+@media (min-width: 768px) {
+  .skills-container {
+    flex-direction: row;
+  }
+}
+
+.split-pane {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  min-height: 30vh;
+}
+
+@media (min-width: 768px) {
+  .split-pane {
+    width: 50%;
+  }
+}
+
+.skills-left {
+  /* outline: solid 2px var(--highlight-color); */
+}
+
+.skills-right {
+  /* outline: solid 2px var(--highlight-color); */
+  min-height: 70vh;
+}
+
+.skills-content {
+  width: 80%;
+  max-width: 500px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* SKILLS CARDS */
+.skills-card {
+  width: 60px;
+  height: 60px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  position: relative;
+  pointer-events: auto;
+}
+.skills-card img {
+  width: 60%;
+  height: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.skills-card:hover {
+  background: #444;
+  transform: scale(1.1);
+}
+.skills-card:hover img {
+  opacity: 0.2;
+}
+.skills-card .skills-card-name {
+  position: absolute;
+  opacity: 0;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+}
+.skills-card:hover .skills-card-name {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(30px, 40px));
+    gap: 15px;
+  }
+
+  .skills-card {
+    height: 90%;
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    padding: 5px;
+  }
+
+  .skills-card img {
+    width: 90%;
+  }
+
+  .skills-card .skills-card-name {
+    font-size: 8px;
+  }
+}
+
+/* SKILLS CARDS SELECTED */
+
+.selected-skill-card {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 100%;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  line-height: 1.5;
+  height: 80%;
+}
+
+.selected-skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.selected-skill-card img {
+  width: 80px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.selected-skill-card:hover img {
+  transform: scale(1.1);
+}
+
+.selected-skill-card h3 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.selected-skill-card p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  max-width: 90%;
+}
+
+.skills-experience {
+  text-align: start;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .selected-skill-card {
+    padding: 1rem;
+  }
+
+  .selected-skill-card img {
+    width: 60px;
+  }
+
+  .selected-skill-card h3 {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  .selected-skill-card p {
+    font-size: 0.9rem;
+  }
+  .skills-experience {
+    display: none;
+  }
+}
 
 /* **************************************************
     SCROLL-4 CONTACT STYLES
 ************************************************* **/
-.contact-container{
+.contact-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,29 +394,29 @@ a{
 
 @media (max-width: 768px) {
   .science-quote {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .science-icon img {
-      width: 50px;
-      height: 50px;
+    width: 50px;
+    height: 50px;
   }
 
   .science-text {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 }
 /* **************************************************
     FOOTER
 ************************************************* **/
-.footer-container{
+.footer-container {
   height: 70px;
   color: var(--header-color);
   background-color: #07133f;
   width: 100%;
 }
-.footer-final{
+.footer-final {
   margin-top: 20px;
   text-align: center;
 }
